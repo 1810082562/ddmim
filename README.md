@@ -3,6 +3,23 @@
 ## Description
 A self-supervised pre-training model for image neural networks using masked image modeling, contrastive learning, perceptual learning and self-distillation.
 一个图像神经网络自监督预训练模型。使用了掩码图像建模、对比学习、感知学习、自蒸馏。
+
+## Model 
+![](data/structure3.drawio.png)
+the backbone is SwinT/16.
+#### Masking Strategies
+mask of each stage  is the downsample of the previous mask 
+
+The first mask is created by Dropout2D.
+
+## Result
+|model|Param|pretraining epoches|finetune epoches|top1 Acc.%|
+|-|-|-|-|-|
+|SwimT/16(Supervised)|28M||100|74.7|
+|MAE|22M|150|100|65.1|
+|SimMIM|28M|50|100|78.5|
+|(Ours)|29M|50|100|80.1|
+
 ## Usage
 
 Currently only supports ImageNet-1K.
@@ -52,18 +69,3 @@ if you want to change the hyperparameter, you can modify "config/option.py" to c
 #### finetune
 It is similar to trainning except the file to run is "eval.py". It will finetune 100% data on Imagenet-1K.
 
-## Model 
-![](data/structure3.drawio.png)
-the backbone is SwinT/16.
-#### Masking Strategies
-mask of each stage  is the downsample of the previous mask 
-
-The first mask is created by Dropout2D.
-
-## Result
-|model|Param|pretraining epoches|finetune epoches|top1 Acc.%|
-|-|-|-|-|-|
-|SwimT/16(Supervised)|28M||100|74.7|
-|MAE|22M|150|100|65.1|
-|SimMIM|28M|50|100|78.5|
-|(Ours)|29M|50|100|80.1|
