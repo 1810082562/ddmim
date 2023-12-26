@@ -64,6 +64,6 @@ The first mask is created by Dropout2D.
 |model|Param|pretraining epoches|finetune epoches|top1 Acc.%|
 |-|-|-|-|-|
 |SwimT/16(Supervised)|28M||100|74.7|
-|MAE|22M|50|100|65.1|
+|MAE|22M|150|100|65.1|
 |SimMIM|28M|50|100|78.5|
 |(Ours)|29M|50|100|80.1|
