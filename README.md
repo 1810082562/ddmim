@@ -18,7 +18,7 @@ The first mask is created by Dropout2D.
 |SwimT/16(Supervised)|28M||100|74.7|
 |MAE|22M|150|100|65.1|
 |SimMIM|28M|50|100|78.5|
-|DDMIMV9(Ours)|29M|50|100|80.1|
+|DDMIMV9(Ours)|30M|50|100|80.1|
 
 ## Usage
 
