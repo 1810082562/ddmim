@@ -19,6 +19,7 @@ The first mask is created by Dropout2D.
 |MAE|22M|150|100|65.1|
 |SimMIM|28M|50|100|78.5|
 |DDMIMV9(Ours)|30M|50|100|80.1|
+|DDMIMV9(Ours)|30M|50|400|81.9|
 
 ## Usage
 
